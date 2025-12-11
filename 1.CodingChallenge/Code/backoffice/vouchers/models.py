@@ -13,7 +13,7 @@ class Voucher(models.Model):
     expires_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return f"{self.voucher_code} ({'active' if self.active else 'inactive'})"
+        return f"{self.voucher_code}-{self.secret_code} ({'active' if self.active else 'inactive'})"
     
 class InteractionLog(models.Model):
     #Registra cada intento desde el widget (éxitos y fallos).
