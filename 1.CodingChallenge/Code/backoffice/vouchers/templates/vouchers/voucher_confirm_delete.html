@@ -5,12 +5,12 @@
 {% block content %}
 
 <div class="mt-5">
-    <h3>Eliminar Voucher</h3>
+    <h3>Eliminar Cupón</h3>
 </div>
 
 
 <div class="alert alert-danger mt-5 text-center mx-auto" style="max-width: 320px;">
-    ¿Estás seguro de eliminar el voucher
+    ¿Estás seguro de eliminar el cupón
     <span class="fw-bold">{{ voucher.voucher_code }} - {{ voucher.secret_code }}</span>?
     <form method="post" class="mt-3">
         {% csrf_token %}

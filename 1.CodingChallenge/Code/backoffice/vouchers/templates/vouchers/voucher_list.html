@@ -5,12 +5,12 @@
 {% block content %}
 
     <div class="mt-5">
-        <h3>Mis Vouchers</h3>
+        <h3>Mis Cupones</h3>
         <div class="mt-3 d-flex justify-content-between">
 
             <form action="" style="max-width: 450px;">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Buscar por Voucher" name="q" value="{{ request.GET.q }}">
+                    <input type="text" class="form-control" placeholder="Buscar por cupón" name="q" value="{{ request.GET.q }}">
                     <button class="btn btn-primary">
                         Buscar
                     </button>
@@ -24,7 +24,7 @@
             </form>
 
             <a href="{% url 'voucher_new' %}" class="btn btn-outline-primary">
-                Registrar Voucher
+                Registrar Cupón
             </a>
         </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="table-responsive">
         <table class="mt-5 table table-hover">
             <thead>
-                <th>N° Voucher</th>
+                <th>Cupón</th>
                 <th>Valor</th>
                 <th>Estado</th>
                 <th>Fecha Creación</th>

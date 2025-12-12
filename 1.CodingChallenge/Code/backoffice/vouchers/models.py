@@ -5,12 +5,12 @@ class Voucher(models.Model):
     #Representa un voucher válido en el sistema.
     #'voucher_code' -> lo que el comprador pone en el input "cupón"
     #'secret_code'  -> lo que el comprador pone en el input "código"
-    voucher_code = models.CharField(max_length=100, unique=True)
-    secret_code = models.CharField(max_length=100)
-    value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    active = models.BooleanField(default=True)
+    voucher_code = models.CharField(max_length=100, unique=True,verbose_name='Cupón')
+    secret_code = models.CharField(max_length=100,verbose_name='Código')
+    value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True,verbose_name='Valor')
+    active = models.BooleanField(default=True,verbose_name='Estado')
     created_at = models.DateTimeField(auto_now_add=True)
-    expires_at = models.DateTimeField(null=True, blank=True)
+    expires_at = models.DateTimeField(null=True, blank=True,verbose_name='Fecha de Expiración')
 
     def __str__(self):
         return f"{self.voucher_code}-{self.secret_code} ({'active' if self.active else 'inactive'})"

@@ -6,25 +6,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vouchers</title>
+    <title>BackOffice</title>
 
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 </head>
 <body class="container py-5">
 
-    <div class="p-5 border border-1 shadow">
+    <div class="p-5 border border-1 shadow rounded">
         <h1 class="fw-bold text-primary">Bienvenidos al BackOffice</h1>
         <h2>Con esta aplicación podremos generar los cupones y ver las iteraciones</h2>
         <p>
             Consulta, crea, actualiza y elimina cupones de manera fácil: 
             <a href="{% url 'voucher_list' %}" class="link-primary">
-            Clic Aqui
+            Click aquí
             </a>
         </p>
         <p>
             Consulta las las iteraciones de los cupones: 
             <a href="{% url 'interactionlog_list' %}" class="link-primary">
-            Clic Aqui
+            Click aquí
             </a>
         </p>
         <a href="{% url 'base' %}" class="link-primary">

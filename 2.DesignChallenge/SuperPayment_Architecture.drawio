@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="superpayment" name="SuperPayment Architecture">
+    <mxGraphModel dx="1222" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Ecommerce -->
+        <mxCell id="ecom" value="E-commerce" style="rounded=1;fillColor=#1976D2;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Widget -->
+        <mxCell id="widget" value="SuperPayment Widget" style="rounded=1;fillColor=#42A5F5;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- API Gateway -->
+        <mxCell id="gateway" value="API Gateway" style="rounded=1;fillColor=#43A047;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="540" y="60" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Coupon Service -->
+        <mxCell id="coupon" value="Coupon Validation Service" style="rounded=1;fillColor=#66BB6A;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="480" y="160" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Redis -->
+        <mxCell id="redis" value="Redis Cache" style="rounded=1;fillColor=#FBC02D;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Orders Service -->
+        <mxCell id="orders" value="Orders Service" style="rounded=1;fillColor=#66BB6A;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="740" y="160" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- PostgreSQL -->
+        <mxCell id="db" value="PostgreSQL" style="rounded=1;fillColor=#FBC02D;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="260" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Event Bus -->
+        <mxCell id="bus" value="Event Bus" style="rounded=1;fillColor=#FB8C00;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="160" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Dashboard -->
+        <mxCell id="dashboard" value="Backoffice Dashboard" style="rounded=1;fillColor=#BDBDBD;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="260" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="edge1" edge="1" parent="1" source="ecom" target="widget">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge2" edge="1" parent="1" source="widget" target="gateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge3" edge="1" parent="1" source="gateway" target="coupon">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge4" edge="1" parent="1" source="coupon" target="redis">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge5" edge="1" parent="1" source="gateway" target="orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge6" edge="1" parent="1" source="orders" target="db">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge7" edge="1" parent="1" source="orders" target="bus">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge8" edge="1" parent="1" source="bus" target="dashboard">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

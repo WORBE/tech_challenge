@@ -18,9 +18,9 @@ class VoucherLisView(generic.ListView):
     def get_queryset(self)->QuerySet[Any] :
         q=self.request.GET.get('q')
         if q:
-            return Voucher.objects.filter(voucher_code__icontains=q).order_by("created_at")
+            return Voucher.objects.filter(voucher_code__icontains=q).order_by("-created_at")
         
-        return super().get_queryset().order_by("created_at")
+        return super().get_queryset().order_by("-created_at")
 
 class VoucherCreateView(generic.CreateView):
     model = Voucher
@@ -50,7 +50,7 @@ class VoucherDeleteView(generic.DeleteView):
 
 class InteractionLogLisView(generic.ListView):
     model=InteractionLog
-    paginate_by=10
+    paginate_by=8
     
     def get_queryset(self)->QuerySet[Any] :
         q=self.request.GET.get('q')
