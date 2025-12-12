@@ -1,0 +1,37 @@
+<button id="open_sp">Abrir widget</button>
+<script src="../widget/widget.js"></script> <!-- 🔥 IMPORTANTE -->
+<script>
+  // Asumiendo que el snippet del widget ya fue cargado antes
+  window.SuperPayment = window.SuperPayment || {};
+
+  // Implementar función que devuelve info del pedido para enviar al backend
+  window.SuperPayment.getOrderData = function(){
+    // ejemplo: extraer del DOM o variable JS del checkout
+    return {
+      order_id: document.getElementById('order-id')?.value || 'ORDER-' + Date.now(),//document.getElementById('order-id')?.value || 'ORDER123',
+      order_value: document.getElementById('order-total')?.value || (Math.random() * (200 - 10) + 10).toFixed(2)
+    };
+  };
+
+  // Callback en el host para manejar eventos (autorizado/denegado)
+  window.SuperPayment.onEvent = function(event, payload){
+    console.log('SuperPayment event', event, payload);
+    if (event === 'authorized') {
+      // mostrar confirmación al usuario
+      document.getElementById('checkout-result').innerText = 'Pago autorizado con SuperPayment';
+      // Aquí el host podría crear la orden como pagada, redirigir a confirmación, etc.
+    }
+    if (event === 'denied') {
+      document.getElementById('checkout-result').innerText = 'Cupón inválido';
+    }
+  };
+
+  document.getElementById('open_sp').addEventListener('click', function(){
+    if (window.SuperPayment && typeof window.SuperPayment.open === 'function') {
+      window.SuperPayment.open();
+    } else {
+      alert('Widget no cargado');
+    }
+  });
+</script>
+<div id="checkout-result"></div>

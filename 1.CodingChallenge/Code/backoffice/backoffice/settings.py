@@ -43,10 +43,13 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
 
+     'corsheaders',
+
     'vouchers'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -111,7 +114,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 #LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'es-419'
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+
+USE_TZ = True
+TIME_ZONE = "America/Lima"
 
 USE_I18N = True
 
@@ -132,3 +138,5 @@ STATICFILES_DIRS = [
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+CORS_ALLOW_ALL_ORIGINS = True
