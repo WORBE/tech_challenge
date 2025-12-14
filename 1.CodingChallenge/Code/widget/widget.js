@@ -4,34 +4,76 @@
   function createWidgetModal() {
     const modal = document.createElement('div');
     modal.id = 'superpayment-modal';
-    modal.style.position = 'fixed';
-    modal.style.left = '0'; modal.style.top = '0';
-    modal.style.width = '100%'; modal.style.height = '100%';
-    modal.style.display = 'flex';
-    modal.style.alignItems = 'center';
-    modal.style.justifyContent = 'center';
-    modal.style.background = 'rgba(0,0,0,0.4)';
-    modal.style.zIndex = 99999;
 
+    //Crear el fondo para el modal
+    Object.assign(modal.style, {
+      position: 'fixed',
+      left: '0', top: '0',
+      width: '100%', height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'rgba(0,0,0,0.45)',
+      zIndex: 99999,
+      fontFamily: 'system-ui, Arial, sans-serif'
+    });
+
+    //Div para contener la modal
     const box = document.createElement('div');
-    box.style.width = '320px'; box.style.padding = '16px';
-    box.style.background = 'white'; box.style.borderRadius = '8px';
+    Object.assign(box.style, {
+      width: '320px',
+      padding: '20px',
+      background: '#fff',
+      borderRadius: '10px',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
+    });
+
+    // Helpers
+    const inputStyle =
+      "width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; font-size:14px; margin-top:4px;";
+    const btnBase =
+      "padding:8px 14px; border-radius:6px; cursor:pointer; font-size:14px; border:none;";
+
     box.innerHTML = `
-      <h3 style="margin-top:0">Pagar con SuperPayment</h3>
-      <label>Cupón<br><input id="sp_voucher" style="width:100%"></label><br><br>
-      <label>Código<br><input id="sp_code" style="width:100%"></label><br><br>
-      <div style="text-align:right">
-        <button id="sp_cancel">Cancelar</button>
-        <button id="sp_submit">Enviar</button>
+      <h3 style="margin:0 0 15px 0; font-size:18px; text-align:center;">
+        Pagar con SuperPayment
+      </h3>
+
+      <label style="display:block; margin-bottom:10px;margin-right:10px;">
+        Cupón
+        <input id="sp_voucher" style="${inputStyle}">
+      </label>
+
+      <label style="display:block; margin-bottom:10px;margin-right:10px;">
+        Código
+        <input id="sp_code" style="${inputStyle}">
+      </label>
+
+      <div style="text-align:right; margin-top:10px;">
+        <button id="sp_cancel"
+          style="${btnBase} background:#e0e0e0; margin-right:6px;">
+          Cancelar
+        </button>
+
+        <button id="sp_submit"
+          style="${btnBase} background:#007bff; color:white;">
+          Enviar
+        </button>
       </div>
-      <div id="sp_msg" style="margin-top:8px;font-size:13px;color:#444"></div>
+
+      <div id="sp_msg" style="margin-top:12px; font-size:13px; color:#555;"></div>
     `;
 
     modal.appendChild(box);
     document.body.appendChild(modal);
 
-    modal.querySelector('#sp_cancel').onclick = () => { closeModal(); triggerHost('cancelled'); };
+    // Boton Cancelar
+    modal.querySelector('#sp_cancel').onclick = () => {
+      closeModal();
+      triggerHost('cancelled');
+    };
 
+    // Bonton Enviar
     modal.querySelector('#sp_submit').onclick = async () => {
       const voucher = document.getElementById('sp_voucher').value;
       const code = document.getElementById('sp_code').value;
@@ -41,9 +83,12 @@
         try { order = window.SuperPayment.getOrderData(); } catch(e) {}
       }
 
-      document.getElementById('sp_msg').textContent = 'Validando...';
+      const msg = document.getElementById('sp_msg');
+      msg.textContent = 'Validando...';
 
       try {
+		 
+		//Peticion al API Backend
         const res = await fetch(API_VALIDATE, {
           method: 'POST',
           headers: {'Content-Type':'application/json'},
@@ -58,16 +103,19 @@
         const j = await res.json();
 
         if (j.authorized) {
-          document.getElementById('sp_msg').textContent = '¡Autorizado! Cerrando widget...';
+          msg.style.color = "green";
+          msg.textContent = "¡Autorizado! Cerrando widget...";
           closeModal();
           triggerHost('authorized', j);
         } else {
-          document.getElementById('sp_msg').textContent = 'No autorizado: ' + (j.reason || 'error');
+          msg.style.color = "red";
+          msg.textContent = "No autorizado: " + (j.reason || 'error');
           triggerHost('denied', j);
         }
 
       } catch(err) {
-        document.getElementById('sp_msg').textContent = 'Error de red';
+        msg.style.color = "red";
+        msg.textContent = "Error de red";
         triggerHost('error', { error: err.toString() });
       }
     };
