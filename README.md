@@ -1,5 +1,4 @@
-# Tech Challenge: Desafío Senior Backend
-
+# Tech Challenge
 
 ## Datos del candidato
 - Nombre Completo: Wilson Alberto Orbe Diaz
@@ -93,13 +92,6 @@ Ruta: /1.CodingChallenge
 ### C) Demo
 
 - Archivo: ../1.CodingChallenge/Demo/
-
-### )Flujo
-
-- Host → Widget → API Django → BackOffice
-- ↑									│
-- └────────── éxito ────────────────┘
-
 
 
 ## 2) Design Challenge
