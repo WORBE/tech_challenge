@@ -102,7 +102,5 @@ Ruta: /1.CodingChallenge
 
 
 
-
-
 ## 2) Design Challenge
 Ruta: /2.DesignChallenge
