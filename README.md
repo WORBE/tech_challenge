@@ -24,8 +24,9 @@ Ruta: /1.CodingChallenge
 - Configuraremos el BackOffice de la siguiente manera:
 
 	* **Paso 1:** Instalar Python for windows: 
-		* Ruta Recomendable: https://www.python.org/ftp/python/3.14.2/python-3.14.2-amd64.exe
-		* Aqui otras Opciones: https://www.python.org/downloads/
+		* Ruta Recomendable: <a href="https://www.python.org/ftp/python/3.14.2/python-3.14.2-amd64.exe" target="_blank">Python3.14.2</a>
+		
+		* Aqui otras Opciones: <a href="https://www.python.org/downloads/" target="_blank">Python Descargas</a>
 
 	* **Paso 2:** Dirigirse a la carpeta .../1.CodingChallenge/Code/backoffice, y abrir el CMD en esa ruta.
 	
@@ -83,20 +84,22 @@ Ruta: /1.CodingChallenge
 	
 	* **Finalmente:** Dirigirse a la carpeta .../1.CodingChallenge/Code/host, y abrir el archivo 'host.html' en un navegador de su preferencia que lea HTML5 .
 	
-
 ### B) Wireframe
 
-* **Archivo Fisico:** Dirigirse a la carpeta ../1.CodingChallenge/Demo/, y abrir el archivo  'Test_challenge.fig' en la web 'https://www.figma.com/'.
-* **Archivo Digital:** Figma (Web)-> https://www.figma.com/design/nmodnk9E94e3AHUWjjMkY2/Test_challenge?node-id=1-2&m=dev&t=7MPYM1q2HvmzhtPg-1.
+* **Archivo Fisico:** Dirigirse a la carpeta ../1.CodingChallenge/Demo/, y abrir el archivo  'Test_challenge.fig' en el <a href="https://www.figma.com/" target="_blank">Figma</a>.
+* **Archivo Digital:** Figma (Web)-> <a href="https://www.figma.com/design/nmodnk9E94e3AHUWjjMkY2/Test_challenge?node-id=1-2&m=dev&t=7MPYM1q2HvmzhtPg-1" target="_blank">Ver Archivo</a>.
 
 ### C) Demo
 
-* **Archivo:** Aqui el video con la configuración y explicación del Coding Challenge: 'https://drive.google.com/file/d/16Sdsj39etKdcr0IzuK5Xu3rAyg1CE5kI/view?usp=drive_link'.
+* **Archivo:** Aqui el video con la configuración y explicación del Coding Challenge: <a href="https://drive.google.com/file/d/16Sdsj39etKdcr0IzuK5Xu3rAyg1CE5kI/view?usp=drive_link" target="_blank">Ver Demo</a>.
+
+
+
 
 ## 2) Design Challenge
 
-* **Documento de Diseño:** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'DesignChallenge.docx' o directamente en el link 'https://github.com/WORBE/tech_challenge/blob/main/2.DesignChallenge/DesignChallenge.docx'.
+* **Documento de Diseño:** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'DesignChallenge.docx' o directamente en el link <a href="https://github.com/WORBE/tech_challenge/blob/main/2.DesignChallenge/DesignChallenge.docx" target="_blank">Ver Archivo</a>.
 
-* **Diagrama de la Arquitectura (DrawIo):** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'SuperPayment_Arquitectura.drawio' en la web 'https://www.drawio.com/'.
+* **Diagrama de la Arquitectura (DrawIo):** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'SuperPayment_Arquitectura.drawio' en <a href="https://www.drawio.com/" target="_blank">DrawIo</a>.
 
-* **Diagrama de la Arquitectura (Png):** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'SuperPayment_Arquitectura.drawio.png' o directamente en el link 'https://github.com/WORBE/tech_challenge/blob/main/2.DesignChallenge/SuperPayment_Arquitectura.drawio.png'.
+* **Diagrama de la Arquitectura (Png):** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'SuperPayment_Arquitectura.drawio.png' o directamente en el link <a href="https://github.com/WORBE/tech_challenge/blob/main/2.DesignChallenge/SuperPayment_Arquitectura.drawio.png" target="_blank">Ver Archivo</a>.
