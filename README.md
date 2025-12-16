@@ -24,8 +24,8 @@ Ruta: /1.CodingChallenge
 - Configuraremos el BackOffice de la siguiente manera:
 
 	* **Paso 1:** Instalar Python for windows: 
-		Ruta Recomendable: https://www.python.org/ftp/python/3.14.2/python-3.14.2-amd64.exe
-		Aqui otras Opciones: https://www.python.org/downloads/
+		* Ruta Recomendable: https://www.python.org/ftp/python/3.14.2/python-3.14.2-amd64.exe
+		* Aqui otras Opciones: https://www.python.org/downloads/
 
 	* **Paso 2:** Dirigirse a la carpeta .../1.CodingChallenge/Code/backoffice, y abrir el CMD en esa ruta.
 	
@@ -86,13 +86,17 @@ Ruta: /1.CodingChallenge
 
 ### B) Wireframe
 
-- Archivo: ../1.CodingChallenge/Wireframe/Test_challenge.fig
-- Figma (Web) : https://www.figma.com/design/nmodnk9E94e3AHUWjjMkY2/Test_challenge?node-id=1-2&m=dev&t=7MPYM1q2HvmzhtPg-1
-	
+* **Archivo Fisico:** Dirigirse a la carpeta ../1.CodingChallenge/Demo/, y abrir el archivo  'Test_challenge.fig' en la web 'https://www.figma.com/'.
+* **Archivo Digital:** Figma (Web)-> https://www.figma.com/design/nmodnk9E94e3AHUWjjMkY2/Test_challenge?node-id=1-2&m=dev&t=7MPYM1q2HvmzhtPg-1.
+
 ### C) Demo
 
-- Archivo: ../1.CodingChallenge/Demo/
-
+* **Archivo:** Aqui el video con la configuración y explicación del Coding Challenge: 'https://drive.google.com/file/d/16Sdsj39etKdcr0IzuK5Xu3rAyg1CE5kI/view?usp=drive_link'.
 
 ## 2) Design Challenge
-Ruta: /2.DesignChallenge
+
+* **Documento de Diseño:** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'DesignChallenge.docx' o directamente en el link 'https://github.com/WORBE/tech_challenge/blob/main/2.DesignChallenge/DesignChallenge.docx'.
+
+* **Diagrama de la Arquitectura (DrawIo):** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'SuperPayment_Arquitectura.drawio' en la web 'https://www.drawio.com/'.
+
+* **Diagrama de la Arquitectura (Png):** Dirigirse a la carpeta .../2.DesignChallenge, y abrir el archivo  'SuperPayment_Arquitectura.drawio.png' o directamente en el link 'https://github.com/WORBE/tech_challenge/blob/main/2.DesignChallenge/SuperPayment_Arquitectura.drawio.png'.
