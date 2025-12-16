@@ -1,0 +1,13 @@
+# Archivos temporales de Microsoft Office
+~$*.docx
+~$*.doc
+~$*.xlsx
+~$*.xls
+~$*.pptx
+~$*.ppt
+
+# Archivos temporales generales
+*.tmp
+
+# Archivos temporales generados por Office al editar
+~WRL*.tmp
